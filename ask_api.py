@@ -29,7 +29,7 @@ def ask_card (cardname) :
 				break
 			else:
 				l.append(msg)
-				i++
+				i+=1
 				n.append(card.name)
 	return l
 	
