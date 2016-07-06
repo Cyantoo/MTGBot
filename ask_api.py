@@ -10,8 +10,6 @@ def ask_card (cardname) :
 		if i==20:
 			break
 		if card.name not in n:
-			i+=1
-			n.append(card.name)
 			types = card.types
 			msg = "**"+card.name+"**"+" "
 			if card.mana_cost is not None :
@@ -31,6 +29,8 @@ def ask_card (cardname) :
 				break
 			else:
 				l.append(msg)
+				i++
+				n.append(card.name)
 	return l
 	
 	# Renvoie un json
