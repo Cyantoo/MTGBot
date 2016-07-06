@@ -26,7 +26,7 @@ def ask_card (cardname) :
 			if card.text is not None :
 				msg +="\n" + card.text
 			msg +="\n"
-			if cardname == card.name:
+			if cardname.lower() == card.name.lower():
 				l = [msg]
 				break
 			else:
