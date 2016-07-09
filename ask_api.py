@@ -11,15 +11,17 @@ def ask_card (cardname) :
 			break
 		if card.name not in n:
 			types = card.types
-			msg = "**"+card.name+"**"+" "
+                        msg = "**"+card.name+"**"+" "
 			if card.mana_cost is not None :
 				msg += card.mana_cost
+                        if card.set='Unhinged'|card.set='Unglued' :
+                                msg += " " + card.set
 			msg += "\n"
 			if card.type is not None :
 				msg += card.type
 			if "Creature" in card.types :
 				msg += " "+card.power + "/" + card.toughness
-			if "Planeswalker" in card.types :
+			elif "Planeswalker" in card.types :
 				msg+= ". Starting Loyalty "+str(card.loyalty)
 			if card.text is not None :
 				msg +="\n" + card.text
