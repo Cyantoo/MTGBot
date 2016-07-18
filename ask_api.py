@@ -15,7 +15,14 @@ def ask_card (cardname) :
 			if card.mana_cost is not None :
 				msg += card.mana_cost
 				#if card.set_name=='Unhinged' or card.set_name=='Unglued' :
-				msg += " - *" + card.set_name+"*"
+				msg += " - *"
+				last_set = card.printings[-1]
+				for set in card.printings :
+					msg += set
+					if set == last_set:
+						msg+="*"
+					else :
+						msg +=", "
 			msg += "\n"
 			if card.type is not None :
 				msg += card.type
