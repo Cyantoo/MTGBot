@@ -14,8 +14,8 @@ def ask_card (cardname) :
 			msg = "**"+card.name+"**"+" "
 			if card.mana_cost is not None :
 				msg += card.mana_cost
-				if card.set_name=='Unhinged' or card.set_name=='Unglued' :
-					msg += " *" + card.set_name+"*"
+				#if card.set_name=='Unhinged' or card.set_name=='Unglued' :
+				msg += " - *" + card.set_name+"*"
 			msg += "\n"
 			if card.type is not None :
 				msg += card.type
