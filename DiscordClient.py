@@ -1,6 +1,9 @@
 import discord
 import ask_api
 
+email = "myemail" # Replace myemail by the email for your bot account
+password = "mypassword" # Replace mypassword by the passowrd for your bot account
+
 client = discord.Client()
 
 @client.event
@@ -31,4 +34,4 @@ async def on_message(message):
 				await client.send_message(message.channel, msg)
 		debut = content.find("[", fin) +1
 		
-client.run('cyantoo@gmail.com', 'magicfaerix')
+client.run(myemail, mypassword)
