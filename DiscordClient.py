@@ -34,4 +34,4 @@ async def on_message(message):
 				await client.send_message(message.channel, msg)
 		debut = content.find("[", fin) +1
 		
-client.run(myemail, mypassword)
+client.run(email, password)
