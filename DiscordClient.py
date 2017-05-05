@@ -2,7 +2,7 @@ import discord
 import ask_api
 
 email = "myemail"  # Replace myemail by the email for your bot account
-password = "mypassword"  # Replace mypassword by the passowrd for your bot account
+password = "mypassword"  # Replace mypassword by the password for your bot account
 
 client = discord.Client()
 
