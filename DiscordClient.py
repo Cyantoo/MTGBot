@@ -1,6 +1,7 @@
 import discord
 import ask_api
 
+
 email = "myemail"  # Replace myemail by the email for your bot account
 password = "mypassword"  # Replace mypassword by the password for your bot account
 
@@ -23,18 +24,18 @@ async def on_message(message):
 
     print("New message")
     content = message.content
-    fin = len(content)
-    debut = content.find("[") + 1
-    while debut > 0:
-        # ss1 = content[ouvert: fin]
-        fin = content.find("]", debut)
-        requete = content[debut: fin]
-        print("Request : " + requete)
-        if len(requete) > 2:
-            msg_list = ask_api.ask_card(requete)
+    end = len(content)
+    start = content.find("[") + 1
+    while start > 0:
+        # ss1 = content[start: end]
+        end = content.find("]", start)
+        request = content[start: end]
+        print("Request : " + request)
+        if len(request) > 2:
+            msg_list = ask_api.ask_card(request)
             for msg in msg_list:
                 await client.send_message(message.channel, msg)
-        debut = content.find("[", fin) + 1
+        start = content.find("[", end) + 1
 
 
 client.run(email, password)
