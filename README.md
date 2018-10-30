@@ -4,6 +4,8 @@ MTGBot
 Discord Bot to fetch and display Magic : the Gathering cards.
 ---
 
+If you're interested in this bot, you should probably first check out the Scryfall bot. It does mostly the same thing, better : https://scryfall.com/bots .
+
 ### Installation instructions :
 
 1. Download Python 3 on https://www.python.org/downloads/ (On Windows, don't forget to check "Add Python to PATH")
